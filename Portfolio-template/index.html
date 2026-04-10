@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Template portafolio desarrollador UI/UX " />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+                <img src="./assets/logoClauDev.jpeg" alt="Logo portafolio" width="50" height="50">
+            </span>
+            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu"
+                class="checkbox xl:hidden">
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Tecnologías</li>
+                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+                <div class="hireMe__button pt-4">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caquipucho@unsa.edu.pe&su=Oportunidad%20Laboral&body=Hola%20Claudia,"
+                        target="_blank" aria-label="Enviar mensaje por Gmail"
+                        class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Contratame</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--HOME PAGE -->
+    <div class="container">
+        <section id="home"
+            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hola, Yo soy</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Claudia Aquipucho</h1>
+                <p class="text-gray-500">
+                    Desarrollador Full Stack | React · Node.js · TypeScript
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/Claudia Aquipucho - CV 2026 EN.pdf" aria-label="Descargar curriculum"
+                        class="cursor-pointer border-round-lg no-underline" download>Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')"
+                        aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
+                        class="cursor-pointer border-round-lg">Mi trabajo</button>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./assets/fotoperfil.jpg" alt="Foto perfil" width="100" height="100">
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                    <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
+                    <p class="text-gray-500">Desarrolladora Full-Stack con especialización en frontend y más de 2 años
+                        de experiencia construyendo sistemas logísticos y de distribución robustos y mantenibles.
+                        Experiencia en React, TypeScript, Node.js y PostgreSQL, con sólidos conocimientos en diseño de
+                        APIs REST, sistemas de autenticación e integración entre frontend y backend.</p>
+                    <div class="knowledge flex flex-column gap-3 mt-5">
+                        <p>HTML5 & CSS3 — Maquetación semántica, responsive design con Flexbox y Grid, Tailwind CSS,
+                            Bootstrap.</p>
+                        <div class="progress__bar progress__html">
+                            <span></span>
+                        </div>
+                        <p>React.js — Desarrollo avanzado con Hooks, Context API, Redux y consumo de APIs.</p>
+                        <div class="progress__bar progress__react">
+                            <span></span>
+                        </div>
+                        <p>TypeScript — Tipado estático para mayor robustez en aplicaciones React y Node.js.</p>
+                        <div class="progress__bar progress__typeScript">
+                            <span></span>
+                        </div>
+                        <p>Node.js y Express.js — Desarrollo de APIs REST, autenticación JWT, middleware.</p>
+                        <div class="progress__bar progress__node">
+                            <span></span>
+                        </div>
+                        <p>Bases de Datos — PostgreSQL y MongoDB, modelado con Prisma y Mongoose.</p>
+                        <div class="progress__bar progress__db">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="hireMe__button pt-4">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caquipucho@unsa.edu.pe&su=Oportunidad%20Laboral&body=Hola%20Claudia,"
+                            target="_blank" aria-label="Enviar mensaje por Gmail"
+                            class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Contratame</a>
+                    </div>
+
+                </div>
+                <div class="image col p-0 mt-6 md:mt-0">
+                    <img src="./assets/Imagen00.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">Buscas un desarrollador Web?</p>
+        <h2 class="text-center">Estoy disponible para integrarme a tu equipo y aportar con soluciones escalables y
+            mantenibles.</h2>
+        <div class="hireMe__button pt-4">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caquipucho@unsa.edu.pe&su=Oportunidad%20Laboral&body=Hola%20Claudia,"
+                target="_blank" aria-label="Enviar mensaje por Gmail"
+                class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Contactame</a>
+        </div>
+    </section>
+    <!--SERVICES -->
+    <div class="container">
+        <section id="services" class="services min-h-full w-full pb-7">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Stack Tecnológico</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Desarrollador Full-Stack especializado en la construcción de aplicaciones modernas
+                    utilizando React, TypeScript, Node.js y PostgreSQL. Experiencia en desarrollo de APIs,
+                    autenticación y aplicaciones escalables.
+                </p>
+            </div>
+            <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>React</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>TypeScript</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Node.js</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Next.js</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>PostgreSQL</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Express.js</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--PORTFOLIO -->
+        <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+            <div class="portfolio__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mis proyectos</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Proyectos desarrollados que demuestran mi experiencia en frontend y backend,
+                    incluyendo integración de APIs, autenticación y manejo de bases de datos.
+                </p>
+            </div>
+            <div class="portfolio__gallery">
+                <div class="gallery__categories mb-5 mt-5">
+                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                        <li class="filter-item active" data-filter="all">Todos</li>
+                        <li class="filter-item " data-filter="e__commerce">E-commerce</li>
+                        <li class="filter-item " data-filter="finance">Finanzas</li>
+                        <li class="filter-item " data-filter="health">Salud</li>
+                        <li class="filter-item " data-filter="management">Gestión</li>
+                        <li class="filter-item " data-filter="smart">Smart Tools</li>
+                    </ul>
+                </div>
+                <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                    <div class="project__card e__commerce">
+                        <img src="./assets/Proyecto1.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Tienda de Guitarras Online</h2>
+                            <p>Compra tus guitarras y accesorios de manera rápida y sencilla con un carrito inteligente
+                                y navegación fluida, todo en una experiencia moderna y atractiva desarrollada con React
+                                y TypeScript.
+                            </p>
+                            <a href="https://magnificent-frangollo-e57d18.netlify.app/" target="_blank">
+                                <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card e__commerce">
+                        <img src="./assets/Proyecto2.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Sistema Fullstack de Pedidos de Café con Gestión por Roles</h2>
+                            <p>Aplicación fullstack de pedidos de café desarrollada con Next.js, que simula un flujo real de kiosco, cocina y administración accesible en /order/cafe, /orders y /admin/orders, destacando por su rendimiento, experiencia de usuario y arquitectura escalable.
+                            </p>
+                            <a href="https://quisco-next-app-router-wtb4-41zicmu2a.vercel.app/order/cafe"
+                                target="_blank">
+                               <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card finance">
+                        <img src="./assets/Proyecto3.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Calculadora Interactiva en React y TypeScript</h2>
+                            <p>Calculadora interactiva desarrollada con React y TypeScript con interfaz intuitiva y flujo dinámico, destacando experiencia en desarrollo frontend moderno y manejo de estado.
+                            </p>
+                            <a href="https://lucent-gnome-31ac2d.netlify.app/" target="_blank">
+                               <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card finance">
+                        <img src="./assets/Proyecto4.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Planificador de Gastos Interactivo</h2>
+                            <p>Planificador de gastos interactivo desarrollado con JavaScript, HTML y CSS que permite registrar, categorizar y visualizar ingresos y egresos de manera dinámica, destacando habilidades en lógica de programación, manipulación del DOM y diseño de interfaces intuitivas para aplicaciones financieras.
+                            </p>
+                            <a href="https://inquisitive-bonbon-0ad7dd.netlify.app/" target="_blank">
+                                <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card finance">
+                        <img src="./assets/Proyecto5.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Aplicación de Criptomonedas con React, TypeScript, Zod y Zustand</h2>
+                            <p>Aplicación web interactiva de criptomonedas desarrollada con React y TypeScript, utilizando Zod para validación de datos y Zustand para gestión de estado, destacando diseño moderno, rendimiento sólido y buenas prácticas de arquitectura frontend.
+                            </p>
+                            <a href="https://wonderful-lollipop-1f4585.netlify.app/" target="_blank">
+                                <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card health">
+                        <img src="./assets/Proyect6.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Contador de Calorías Interactivo</h2>
+                            <p>Contador de calorías interactivo desarrollado con React y TypeScript que permite registrar, calcular y visualizar calorías consumidas y quemadas en tiempo real, destacando habilidades en manejo de estado, lógica de programación y diseño de interfaces intuitivas para aplicaciones de bienestar y productividad.
+                            </p>
+                            <a href="https://mellow-lokum-4bee6c.netlify.app/" target="_blank">
+                             <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card management">
+                        <img src="./assets/Proyecto7.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Sistema Fullstack de Gestión de Proyectos y Tareas con Autenticación</h2>
+                            <p>Aplicación fullstack desarrollada con React, TypeScript, Node.js, Express y MongoDB que permite autenticación con JWT y la gestión de proyectos y tareas, implementando rutas protegidas, consumo de API REST y una arquitectura enfocada en productividad y escalabilidad.
+                            </p>
+                            <a href="https://up-task-frontend-topaz-five.vercel.app/auth/login" target="_blank">
+                              <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card management">
+                        <img src="./assets/Proyecto8.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Sistema de Seguimiento de Pacientes Veterinarios</h2>
+                            <p>Aplicación web desarrollada con React y TypeScript que permite registrar y gestionar pacientes veterinarios, incluyendo datos de mascotas, propietarios y síntomas, implementando manejo de estado, manipulación del DOM y almacenamiento local para un control eficiente de la información clínica.
+                            </p>
+                            <a href="https://enchanting-donut-78ea04.netlify.app/" target="_blank">
+                              <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card smart">
+                        <img src="./assets/Proyecto9.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Buscador de Clima Interactivo</h2>
+                            <p>Aplicación web desarrollada con React y TypeScript que permite buscar el clima de cualquier ciudad en tiempo real mediante consumo de API externa, implementando manejo de estado, componentes reutilizables y diseño responsive para una experiencia de usuario fluida.
+                            </p>
+                            <a href="https://boisterous-daffodil-6c529d.netlify.app/" target="_blank">
+                              <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__card smart">
+                        <img src="./assets/Proyecto10.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div
+                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                            <h2>Plataforma de Bebidas Online</h2>
+                            <p>Aplicación web desarrollada con React y TypeScript que permite buscar bebidas, ver detalles y gestionar favoritos, implementando manejo de estado, consumo de API externa y diseño responsive para una experiencia de usuario dinámica y fluida.
+                            </p>
+                            <a href="https://lighthearted-tanuki-bbda87.netlify.app/" target="_blank">
+                               <span>Ver Proyecto <i class="fa-solid fa-arrow-right-long"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FOOTER -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h3>Redes sociales</h3>
+                <p>Desarrollador Full-Stack especializada en React y Node.js</p>
+                <p>Construyo aplicaciones web escalables, enfocadas en rendimiento y experiencia de usuario.</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Ir a facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Ir a instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/claudia-alexandra-aquipucho-vilca-89869b370/" target="_blank"
+                        aria-label="Ir a linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+51 991004305</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>caquipucho@unsa.edu.pe</p>
+                </div>
+                <a href="https://wa.me/51991004305?text=Hola%20Claudia,%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte"
+                    target="_blank" aria-label="Enviar mensaje por WhatsApp"
+                    class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div
+                class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Experiencia Técnica</h3>
+                <p>Full-Stack Developer</p>
+                <p>Frontend: React, TypeScript</p>
+                <p>Backend: Node.js, APIs REST</p>
+                <p>Bases de datos: PostgreSQL, MongoDB</p>
+                <p>Herramientas: Git, Vercel, entre otros</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script>
+    const filterContainer = document.querySelector(".gallery__categories");
+    const galleryItems = document.querySelectorAll(".project__card");
+
+    filterContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("filter-item")) {
+            filterContainer.querySelector(".active").classList.remove("active");
+            event.target.classList.add("active")
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "all") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" })
+    }
+</script>
+
+</html>
